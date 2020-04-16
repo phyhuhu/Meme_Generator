@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Meme Generator</title>
+    <link rel="stylesheet" href="Meme_Generator.css" />
+
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"> </script>
+    <script src= "https://files.codepedia.info/files/uploads/iScripts/html2canvas.js"> </script> 
+  </head>
+  <body>
+    <div class="container">
+      <h1>Meme Generator</h1>
+    </div>
+
+    <div class="textFigure">
+      <form id="urlForFigure">
+        <label>Input Image URL:</label>
+        <input type="text" size=51px placeholder="url for image" id="url">
+        <button>submit</button>
+      </form>
+
+      <form id="topText">
+        <label>Input Top Text:</label>
+        <input type="text" placeholder="top text" id="top">
+        <input type="text" size=32px placeholder="Black, White, Blue, Red, Green, ..." id="topColor">
+        <button>submit</button>
+      </form>
+
+      <form id="downText">
+        <label>Input Down Text:</label>
+        <input type="text" placeholder="down text" id="down">
+        <input type="text" size=30px placeholder="Black, White, Blue, Red, Green, ..." id="downColor">
+        <button>submit</button>
+      </form>
+    </div>
+
+    <div id="figure"></div>
+
+    <div class="downFigure">
+      <input id="btn-Preview-Image" type="button" value="make MEME">
+    </div>
+
+    <h2>My MEME :</h2> 
+      
+    <div id="previewImage"></div> 
+
+    <script src="Meme_Generator.js"></script>
+  </body>
+</html>
