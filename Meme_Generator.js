@@ -1,5 +1,10 @@
+// Define global constant for div with id="figure"
 const divFigure = document.querySelector("#figure");
 
+// create new div in #figure: 
+// newImg contains image; 
+// topDiv contains the top text; 
+// downDiv contains the down text.
 function createNewDiv(e){
   const newDiv = document.createElement("div");
   newDiv.setAttribute("id", "divFigure");
@@ -10,8 +15,8 @@ function createNewDiv(e){
   topDiv.classList.add("topDiv");
   downDiv.classList.add("downDiv");
 
-  topDiv.setAttribute("style", "font-family:sans-serif; color:White; font-size: 30px;");
-  downDiv.setAttribute("style", "font-family:sans-serif; color:White; font-size: 30px;");
+  topDiv.setAttribute("style", "font-family:sans-serif; color:White; font-size: 20px;");
+  downDiv.setAttribute("style", "font-family:sans-serif; color:White; font-size: 20px;");
 
   const newImg = document.createElement("img");
 
@@ -28,6 +33,7 @@ function createNewDiv(e){
 
 createNewDiv();
 
+// add the event for inputing url
 const eventFigure = document.querySelector("#urlForFigure");
 const urlImg= document.querySelector('#url');
 eventFigure.addEventListener('submit', function(e){
@@ -40,6 +46,7 @@ function addFigure(url) {
   myImg.src = url;
 }
 
+// add the event for inputing the top text
 const eventTop = document.querySelector("#topText");
 const topText = document.querySelector('#top');
 const topColor = document.querySelector('#topColor');
@@ -59,6 +66,7 @@ function addTopColor(text) {
   document.querySelector(".topDiv").style.color=text;
 }
 
+// add the event for inputing the down text
 const eventDown = document.querySelector("#downText");
 const downText = document.querySelector('#down');
 const downColor = document.querySelector('#downColor');
@@ -78,6 +86,8 @@ function addTDownColor(text) {
   document.querySelector(".downDiv").style.color=text;
 }
 
+// change div with id="divFigure" to image by html2canvas,
+// then add this image to div with id="previewImage"
 $(document).ready(function() { 
   var element = $("#divFigure");
 
@@ -100,6 +110,7 @@ $(document).ready(function() {
   });
 });
 
+// create event for deleting the image in div with id="previewImage"
 const canvasList = document.querySelector('#previewImage');
 canvasList.addEventListener('click', function(e){
     if (e.target.tagName === 'BUTTON'){
